@@ -6,7 +6,7 @@
 #Home{
     width: 100%;
     height: 90vh;
-    background-image: url(../images/party.jpeg);
+    background-image: url(../images/events-heavenly-header.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
@@ -24,6 +24,46 @@
 }
 .SingerDetails p{
     background-color:#cccccc ;
+    color: #000;
     padding: 0;
     margin: 0;
+    display: none;
+}
+
+#Duration{
+    background-image: url(../images/join\ us.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tim
+{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    padding: 50px;
+    border: 1px solid #FFF;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#ContactUs i{
+    color:#777;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#ContactUs.square{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+#ContactUs i:hover{
+    color:#fff;
+    background-color: #D62E33;
+    border: #D62E33;
+}
+#ContactUs form textarea{
+    height: 200px;
+    resize:vertical;
 }
