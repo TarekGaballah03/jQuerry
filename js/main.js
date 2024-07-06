@@ -1,21 +1,22 @@
+// open sidebar
 $(".menu").click(function(){
     $(".NavContent").animate({ width:'30%'},500)
    $(".HomeContent").animate({marginLeft :'30%'},500)
 })
-
+// close sidebar
 $(".CloseBtn").click(function(){
     $(".NavContent").animate({ width:'0px'},500)
    $(".HomeContent").animate({marginLeft :'0px'},500)
 })
-
+// to show details of singer
 $('.Singer').click(function(){
     $('.Details').not($(this).next()).slideUp(500);
     $(this).next().slideToggle(500);
 });
-
+// fuction to countdown
 window.onload = function() {
    
-    countDownToTime("07 July 2026 11:59:00");
+    countDownToTime("07 July 2026 24:00:00");
   }
 
   function countDownToTime(countTo) {
@@ -42,9 +43,9 @@ window.onload = function() {
   
     setInterval(function() {  countDownToTime(countTo); }, 1000);
   }
-
+// to make maxlength of characters written
 var maxLength = 100;
-$('textarea').keyup(function() {
+$('textarea').on("input",function() {
   var length = $(this).val().length;
   var AmountLeft = maxLength-length;
   if(AmountLeft<=0)
@@ -58,3 +59,12 @@ $('textarea').keyup(function() {
         $("#Remaining").show()
         }
 });
+// to navigate scroll
+$('a[href^="#"]').on('click', function(event) {
+  event.preventDefault();
+          var target = $($(this).attr('href'));
+          if (target.length){
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, 3000);}
+  });
